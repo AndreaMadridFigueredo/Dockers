@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  nom_servei:
+    image: postgres:latest
+    container_name: postgres_volum1
+    environment:
+      POSTGRES_PASSWORD: 12345
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - 5434:5432
+volumes:
+    postgres_data:
+
+services:
+  nom_servei:
+    image: mariadb:latest
+    container_name: mariadb_volum1
+    environment:
+      MARIADB_ROOT_PASSWORD: 1234
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    ports:
+      - 3321:3306
+volumes:
+    mariadb_data:
+    postgresql_data:

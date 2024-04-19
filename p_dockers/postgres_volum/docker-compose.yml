@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  nom_servei:
+    image: postgres:latest
+    container_name: postgres_volum
+    environment:
+      POSTGRES_PASSWORD: 1234
+    volumes:
+      - postgres_data:/var/lib/mysql
+    ports:
+      - 3320:3306
+volumes:
+    postgres_data:

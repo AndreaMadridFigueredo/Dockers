@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  nom_servei:
+    image: mariadb:latest
+    container_name: mariadb_sense_volum
+    environment:
+      MARIADB_ROOT_PASSWORD: 1234
+    ports:
+      - 3318:3306
